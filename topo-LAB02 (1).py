@@ -24,11 +24,7 @@ class MyTopo( Topo ):
 		sHost2 = self.addHost( 'h2' )
 		sHost3 = self.addHost( 'h3' )
 		sHost4 = self.addHost( 'h4' )
-<<<<<<< HEAD
 		cSwitch = self.addSwitch( 's1' )
-=======
-		cSwitch = self.addSwitch( 's5' )
->>>>>>> master
 
 
 		# Add links
@@ -40,8 +36,4 @@ class MyTopo( Topo ):
 
 topos = { 'mytopo': ( lambda: MyTopo() ) }
 
-<<<<<<< HEAD
 #sudo mn --custom topo-LAB02.py --topo mytopo --test pingall
-=======
-#sudo mn --custom topo-LAB02.py --topo mytopo --test pingall
->>>>>>> master
