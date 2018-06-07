@@ -76,10 +76,10 @@ class SimpleMonitor13(simple_switch_13.SimpleSwitch13):
                              ev.msg.datapath.id, stat.port_no,
                              stat.rx_packets, stat.rx_bytes, stat.rx_errors,
                              stat.tx_packets, stat.tx_bytes, stat.tx_errors)
-            if stat.rx_bytes > 100:
+            if stat.rx_bytes > 90000:
                 actions = []
                 self.logger.info("*** Add OVER FLOOD****")
                 match = parser.OFPMatch(in_port=stat.port_no)
-                #p
+
                 self.add_flow(datapath, 2, match, actions)
                 self.logger.info("*** Add FLOOD****")
